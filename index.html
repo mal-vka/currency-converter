@@ -5,35 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Twój wirtualny kantor</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
     
-    <link href="css/style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 
     <script defer src="script.js"></script>
 </head>
+
 <body>
-
-    <h1 class="header section">Twój kantor wymiany walut - najlepsze kursy walut w internecie</h1>
+    <div class="container">
+        <h1 class="header">Twój kantor</h1>
+        <p class="paragraph">najlepsze kursy walut w internecie</p>
+        
+        <main class="main">
+            <form class="main__form js-form">
+                <fieldset class="main__formFieldset">
+                    <legend class="main__formLegend">Oblicz</legend>
+                        <p>
+                            <label class="main__formLabel">Chcę wymienić
+                                <!-- <select name="activity">
+                                    <option value="buy" selected>kupić</option>
+                                    <option value="sell">sprzedać</option>
+                                </select>  -->
+                                <input class="js-amount" type="number" min="10" max="100000" step="1" placeholder="1000">
+                                <select class="js-currencyFrom" name="activity">
+                                    <option value="pln" selected>pln</option>
+                                    <option value="eur">eur</option>
+                                    <option value="usd">usd</option>
+                                    <option value="gpb">gbp</option>
+                                    <option value="chf">chf</option>
+                                    <option value="rub">rub</option>
+                                </select>
+                                na
+                                <select class="js-currencyTo" name="activity">
+                                    <option value="pln">pln</option>
+                                    <option value="eur" selected>eur</option>
+                                    <option value="usd">usd</option>
+                                    <option value="gpb">gbp</option>
+                                    <option value="chf">chf</option>
+                                    <option value="rub">rub</option>
+                                </select> 
+                            </label>
+                        </p>
+                        <p>
+                            <button submit>Oblicz</button>
+                            <button reset>Wyczyść</button>
+                        </p>
+                </fieldset>
+            </form>
+            <p>Otrzymasz <span class="js-result"></span> euro</p>
+        </main>        
+        <footer class="footer">Power by your_favorite_dev</footer>
+    </div>
     
-    <main class="main section">
-        <form class="main__form js-form">
-            <fieldset class="main__formFieldset">
-                <legend class="main__formLegend">Oblicz</legend>
-                    <p>
-                        <label class="main__formLabel">
-                        Chcę wymienić <input class="js-amount" type="number" min="10" max="100000" step="1"> zł na euro
-                        </label>
-                    </p>
-                    <p>
-                        <button submit>Oblicz</button>
-                        <button reset>Wyczyść</button>
-                    </p>
-            </fieldset>
-        </form>
-        <p>Otrzymasz <span class="js-result"></span> euro</p>
-    </main>
-
-    <footer class="footer">Power by your_favorite_dev</footer>
-
 </body>
 </html>
