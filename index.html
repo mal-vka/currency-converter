@@ -12,6 +12,28 @@
     <script defer src="script.js"></script>
 </head>
 <body>
+
+    <h1 class="header section">Twój kantor wymiany walut - najlepsze kursy walut w internecie</h1>
     
+    <main class="main section">
+        <form class="main__form js-form">
+            <fieldset class="main__formFieldset">
+                <legend class="main__formLegend">Oblicz</legend>
+                    <p>
+                        <label class="main__formLabel">
+                        Chcę wymienić <input class="js-amount" type="number" min="10" max="100000" step="1"> zł na euro
+                        </label>
+                    </p>
+                    <p>
+                        <button submit>Oblicz</button>
+                        <button reset>Wyczyść</button>
+                    </p>
+            </fieldset>
+        </form>
+        <p>Otrzymasz <span class="js-result"></span> euro</p>
+    </main>
+
+    <footer class="footer">Power by your_favorite_dev</footer>
+
 </body>
 </html>
