@@ -17,10 +17,12 @@
 <body>
     <div class="containerFirst">        
         <div class="containerSecond">
-            <h1 class="header">Twój kantor</h1>
-            <p class="header__paragraph">najlepsze kursy walut w internecie</p>
+            <section class="header section">
+                <h1 class="header__title">Twój kantor</h1>
+                <p class="header__paragraph">najlepsze kursy walut w internecie</p>
+            </section>
             
-            <section class="calculator">
+            <section class="calculator section">
                 <form class="calculator__form js-calculator">
                     <fieldset class="calculator__formFieldset">
                         <legend class="calculator__formLegend">Kalkulator walut</legend>
@@ -30,40 +32,59 @@
                                         <option value="buy" selected>kupić</option>
                                         <option value="sell">sprzedać</option>
                                     </select>  -->
-                                    <input class="calculator__formField js-amount" type="number" min="10" max="100000" step="1" required placeholder="1000">
-                                    <select class="calculator__formField calculator__formField--currencyFrom js-currencyFrom" name="currencyFrom">
-                                        <option value="PLN" selected>PLN</option>
-                                        <option value="EUR" disabled>EUR</option>
-                                        <option value="USD" disabled>USD</option>
-                                        <option value="GPB" disabled>GBP</option>
-                                        <option value="CHF" disabled>CHF</option>
-                                        <option value="RUB" disabled>RUB</option>
-                                    </select>
-                                    na
+                                    <input class="calculator__formField js-amount" type="number" min="10" max="100000" step="1" placeholder="1000">
+                                    <!-- <select class="calculator__formField calculator__formField--currencyFrom js-currencyFrom" name="currencyFrom">
+                                        <option class="js-fromPLN" value="PLN" selected>PLN</option>
+                                        <option class="js-fromEUR" value="EUR">EUR</option>
+                                        <option class="js-fromUSD" value="USD">USD</option>
+                                        <option class="js-fromGBP" value="GPB">GBP</option>
+                                        <option class="js-fromCHF" value="CHF">CHF</option>
+                                        <option class="js-fromRUB" value="RUB">RUB</option>
+                                    </select> -->
+                                    PLN na
                                     <select class="calculator__formField js-currencyTo" name="currencyTo">
-                                        <option value="PLN" disabled>PLN</option>
-                                        <option value="EUR" selected>EUR</option>
-                                        <option value="USD">USD</option>
-                                        <option value="GPB">GBP</option>
-                                        <option value="CHF">CHF</option>
-                                        <option value="RUB">RUB</option>
+                                        <!-- <option class="js-toPLN" value="PLN">PLN</option> -->
+                                        <option class="js-toEUR" value="EUR">EUR</option>
+                                        <option class="js-toUSD" value="USD">USD</option>
+                                        <option class="js-toGBP" value="GPB">GBP</option>
+                                        <option class="js-toCHF" value="CHF">CHF</option>
+                                        <option class="js-toRUB" value="RUB">RUB</option>
                                     </select> 
                                 </label>
                             </p>
                             <p class="calculator__formParagraph">
-                                <button class="button button--submit" submit>Oblicz</button>
-                                <button class="button button--reset" reset>Wyczyść</button>
+                                <button class="button button--submit" type="submit">Oblicz</button>
+                                <button class="button button--reset" type="reset">Wyczyść</button>
                             </p>
                     </fieldset>
                 </form>
-                <p class="calculator__paragraph"><span class="js-result"></span></span></p>
+                <p class="calculator__paragraph"><span class="js-result"></span></p>
             </section>
             
-            <!-- <section class="order">
+            <section class="order section">
                 <p class="order__paragraph">Jeśli podoba ci się ta oferta, złóż zamówienie na walutę:</p>
-                <form class="order__form"></form>
+                <form class="order__form js-order">
+                    <ul class="order__formList">
+                        <li class="order__formItem">
+                            <label><span class="order__formLabel">imię i nazwisko</span>
+                                <input class="order__formField" type="text" name="name" required>
+                            </label>
+                        </li>
+                        <li class="order__formItem">
+                            <label><span class="order__formLabel">email</span>
+                                <input class="order__formField" type="text" name="name" required>
+                            </label>
+                        </li>
+                        <li class="order__formItem">
+                            <label><span class="order__formLabel">kwota w walucie</span>
+                                <input class="order__formField js-value" type="text" name="name">
+                            </label>
+                        </li>
+                    </ul>
+                    <button class="button button--order" type="submit">Zamawiam</button>
+                </form>
             </section>        
-             -->
+            
             <footer class="footer">Powered by your_favorite_dev</footer>
         </div>
     </div>
