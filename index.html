@@ -15,51 +15,57 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1 class="header">Twój kantor</h1>
-        <p class="header__paragraph">najlepsze kursy walut w internecie</p>
-        
-        <main class="main">
-            <form class="main__form js-form">
-                <fieldset class="main__formFieldset">
-                    <legend class="main__formLegend">Kalkulator walut</legend>
-                        <p class="main__formParagraph">
-                            <label class="main__formLabel">Chcę wymienić
-                                <!-- <select name="activity">
-                                    <option value="buy" selected>kupić</option>
-                                    <option value="sell">sprzedać</option>
-                                </select>  -->
-                                <input class="main__formField js-amount" type="number" min="10" max="100000" step="1" required placeholder="1000">
-                                <select class="main__formField main__formField--currencyFrom js-currencyFrom" name="currencyFrom">
-                                    <option value="PLN" selected>PLN</option>
-                                    <option value="EUR">EUR</option>
-                                    <option value="USD">USD</option>
-                                    <option value="GPB">GBP</option>
-                                    <option value="CHF">CHF</option>
-                                    <option value="RUB">RUB</option>
-                                </select>
-                                na
-                                <select class="main__formField js-currencyTo" name="currencyTo">
-                                    <option value="PLN">PLN</option>
-                                    <option value="EUR" selected>EUR</option>
-                                    <option value="USD">USD</option>
-                                    <option value="GPB">GBP</option>
-                                    <option value="CHF">CHF</option>
-                                    <option value="RUB">RUB</option>
-                                </select> 
-                            </label>
-                        </p>
-                        <p class="main__formParagraph">
-                            <button class="button button--submit" submit>Oblicz</button>
-                            <button class="button button--reset" reset>Wyczyść</button>
-                        </p>
-                </fieldset>
-            </form>
-            <p class="main__paragraph"><span class="js-result"></span></p>
-        </main>        
-        
-        <footer class="footer">Powered by your_favorite_dev</footer>
+    <div class="containerFirst">        
+        <div class="containerSecond">
+            <h1 class="header">Twój kantor</h1>
+            <p class="header__paragraph">najlepsze kursy walut w internecie</p>
+            
+            <section class="calculator">
+                <form class="calculator__form js-calculator">
+                    <fieldset class="calculator__formFieldset">
+                        <legend class="calculator__formLegend">Kalkulator walut</legend>
+                            <p class="calculator__formParagraph">
+                                <label class="calculator__formLabel">Chcę wymienić
+                                    <!-- <select name="activity">
+                                        <option value="buy" selected>kupić</option>
+                                        <option value="sell">sprzedać</option>
+                                    </select>  -->
+                                    <input class="calculator__formField js-amount" type="number" min="10" max="100000" step="1" required placeholder="1000">
+                                    <select class="calculator__formField calculator__formField--currencyFrom js-currencyFrom" name="currencyFrom">
+                                        <option value="PLN" selected>PLN</option>
+                                        <option value="EUR" disabled>EUR</option>
+                                        <option value="USD" disabled>USD</option>
+                                        <option value="GPB" disabled>GBP</option>
+                                        <option value="CHF" disabled>CHF</option>
+                                        <option value="RUB" disabled>RUB</option>
+                                    </select>
+                                    na
+                                    <select class="calculator__formField js-currencyTo" name="currencyTo">
+                                        <option value="PLN" disabled>PLN</option>
+                                        <option value="EUR" selected>EUR</option>
+                                        <option value="USD">USD</option>
+                                        <option value="GPB">GBP</option>
+                                        <option value="CHF">CHF</option>
+                                        <option value="RUB">RUB</option>
+                                    </select> 
+                                </label>
+                            </p>
+                            <p class="calculator__formParagraph">
+                                <button class="button button--submit" submit>Oblicz</button>
+                                <button class="button button--reset" reset>Wyczyść</button>
+                            </p>
+                    </fieldset>
+                </form>
+                <p class="calculator__paragraph"><span class="js-result"></span></span></p>
+            </section>
+            
+            <!-- <section class="order">
+                <p class="order__paragraph">Jeśli podoba ci się ta oferta, złóż zamówienie na walutę:</p>
+                <form class="order__form"></form>
+            </section>        
+             -->
+            <footer class="footer">Powered by your_favorite_dev</footer>
+        </div>
     </div>
-    
 </body>
 </html>

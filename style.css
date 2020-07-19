@@ -7,14 +7,23 @@ html {
 }
 
 body {
-    background: #ddd;  
-    background-image: url("image/linus-nilsson-WfKndo8Vv7w-unsplash.jpg");
-    background-size: cover;
-    padding: 50px 20px;    
-    font-family: 'Quicksand', sans-serif;    
+    background: rgb(221, 221, 221);  
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    text-align: center;    
 }
 
-.container {
+.containerFirst {
+    background-image: url("image/linus-nilsson-WfKndo8Vv7w-unsplash.jpg");
+    background-size: cover;
+    padding: 50px 20px;
+    margin: 0 auto; 
+    width: 1400px;    
+    max-width: 100%;
+    min-height: 100vh;
+}    
+
+.containerSecond {
     width: 900px;    
     max-width: 100%;
     margin: 50px auto;  
@@ -24,44 +33,38 @@ body {
 
 .header {
     font-size: 40px;
-    text-align: center;
-    padding-top: 30px;
-}
-
-.header__paragraph {
-    font-size: 20px;
     text-align: center;    
 }
 
-.main {
+.calculator {
     margin: 50px 0;
 }
 
-.main__formFieldset {
+.calculator__formFieldset {
     width: 700px;    
     max-width: 100%;
-    margin: 0 auto;
+    margin: 50px auto;
     padding: 20px 0;
     font-size: 18px;
 }
 
-.main__formLegend {
+.calculator__formLegend {
     font-size: 22px;
     text-align: center;
     padding: 0 10px;
     text-transform: uppercase;
 }
 
-.main__formLabel {
+.calculator__formLabel {
     font-size: 20px;
 }
 
-.main__formParagraph {
+.calculator__formParagraph {
     text-align: center;
     margin: 20px 0;
 }
 
-.main__formField {
+.calculator__formField {
     height: 50px;
     padding: 10px;
     margin: 10px 0 10px 10px;    
@@ -69,7 +72,7 @@ body {
     border: 1px solid rgb(238, 238, 238);
 }
 
-.main__formField--currencyFrom {
+.calculator__formField--currencyFrom {
     margin: 10px 10px 10px 0;  
 }
 
@@ -103,8 +106,8 @@ body {
     border: none;        
 }
 
-.main__paragraph {
-    text-align: center;
+.calculator__formResult {
+    font-weight: bold;
 }
 
 .footer {      
