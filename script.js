@@ -44,7 +44,7 @@ const toRUB = 0.0563;
 calculatorElement.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    let amount = amountElement.value;
+    let amount = +amountElement.value;
     // let currencyFrom = currencyFromElement.value;
     let currencyTo = currencyToElement.value;
        
@@ -62,7 +62,7 @@ calculatorElement.addEventListener("submit", (event) => {
     };
 
     resultElement.innerHTML = `${amount} PLN = <strong>${result.toFixed(2)} ${currencyTo}</strong>`;
-    valueElement.value = result.toFixed(2) + " " + currencyTo
+    valueElement.value = `${result.toFixed(2)} ${currencyTo}`
 
 });
 
