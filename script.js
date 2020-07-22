@@ -65,9 +65,3 @@ calculatorElement.addEventListener("submit", (event) => {
     valueElement.value = `${result.toFixed(2)} ${currencyTo}`
 
 });
-
-// orderElement.addEventListener("submit", (event) => {
-//     event.preventDefault();
-
-
-// });
