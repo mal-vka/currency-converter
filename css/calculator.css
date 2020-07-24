@@ -6,23 +6,16 @@
     width: 700px;    
     max-width: 100%;
     margin: 50px auto;
-    padding: 20px 0;
-    font-size: 18px;
+    padding: 20px 0;    
 }
 
 .calculator__formLegend {
-    font-size: 22px;
-    text-align: center;
+    font-size: 24px;    
     padding: 0 10px;
     text-transform: uppercase;
 }
 
-.calculator__formLabel {
-    font-size: 20px;
-}
-
 .calculator__formParagraph {
-    text-align: center;
     margin: 20px 0;
 }
 
@@ -39,7 +32,8 @@
     width: 200px;
     border-radius: 5px;
     border: 1px solid rgb(238, 238, 238);    
-    margin: 10px;        
+    margin: 10px;  
+    font-size: 18px;      
 }
 
 .button--submit:hover {
@@ -64,6 +58,6 @@
     border: none;        
 }
 
-.calculator__formResult {
-    font-weight: bold;
+.calculator__paragraph {
+    font-size: 24px;
 }

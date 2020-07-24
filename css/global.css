@@ -13,6 +13,19 @@ body {
     text-align: center;    
 }
 
+.background {
+    background-image: url("../images/linus-nilsson-WfKndo8Vv7w-unsplash.jpg");
+    background-size: cover;    
+    padding: 40px 20px;
+    margin: 0 auto; 
+    width: 1400px;    
+    max-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}  
+
 .section {
     margin: 75px 0;
 }
