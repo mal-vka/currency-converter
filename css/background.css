@@ -1,0 +1,9 @@
+.background {
+    background-image: url("../image/linus-nilsson-WfKndo8Vv7w-unsplash.jpg");
+    background-size: cover;
+    padding: 50px 20px;
+    margin: 0 auto; 
+    width: 1400px;    
+    max-width: 100%;
+    min-height: 100vh;
+}    
