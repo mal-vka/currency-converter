@@ -3,20 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Twój wirtualny kantor</title>
+    <meta property="og:title" content="Twój wirtualny kantor">
+    <meta property="og:description" content="A simple currency converter.">
+    <meta property="og:image" content="images/share.png">
+    <link rel="icon" href="images/favicon.svg">
 
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
     
-    <link href="style.css" rel="stylesheet">
+    <link href="css/global.css" rel="stylesheet">
+    <link href="css/background.css" rel="stylesheet">
+    <link href="css/container.css" rel="stylesheet">
+    <link href="css/calculator.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
 
-    <script defer src="script.js"></script>
+    <script defer src="js/script.js"></script>
 </head>
 
 <body>
-    <div class="containerFirst">        
-        <div class="containerSecond">
+    <div class="background">        
+        <div class="container">
             <section class="header section">
                 <h1 class="header__title">Twój kantor</h1>
                 <p class="header__paragraph">najlepsze kursy walut w internecie</p>
@@ -28,22 +37,9 @@
                         <legend class="calculator__formLegend">Kalkulator walut</legend>
                             <p class="calculator__formParagraph">
                                 <label class="calculator__formLabel">Chcę wymienić
-                                    <!-- <select name="activity">
-                                        <option value="buy" selected>kupić</option>
-                                        <option value="sell">sprzedać</option>
-                                    </select>  -->
                                     <input class="calculator__formField js-amount" type="number" min="10" max="100000" step="1" placeholder="1000">
-                                    <!-- <select class="calculator__formField calculator__formField--currencyFrom js-currencyFrom" name="currencyFrom">
-                                        <option class="js-fromPLN" value="PLN" selected>PLN</option>
-                                        <option class="js-fromEUR" value="EUR">EUR</option>
-                                        <option class="js-fromUSD" value="USD">USD</option>
-                                        <option class="js-fromGBP" value="GPB">GBP</option>
-                                        <option class="js-fromCHF" value="CHF">CHF</option>
-                                        <option class="js-fromRUB" value="RUB">RUB</option>
-                                    </select> -->
                                     PLN na
-                                    <select class="calculator__formField js-currencyTo" name="currencyTo">
-                                        <!-- <option class="js-toPLN" value="PLN">PLN</option> -->
+                                    <select class="calculator__formField js-currencyTo" name="currencyTo">                                        
                                         <option class="js-toEUR" value="EUR">EUR</option>
                                         <option class="js-toUSD" value="USD">USD</option>
                                         <option class="js-toGBP" value="GPB">GBP</option>
