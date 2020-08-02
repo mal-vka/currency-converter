@@ -50,17 +50,23 @@
     };
     
     const calculateResult = (amount, currencyFrom, currencyTo) => {
-        if (currencyFrom === "PLN") {
+        if (currencyFrom === currencyTo) {
+            console.log(1);
+            return amount;
+        } else if (currencyFrom === "PLN") {
+            console.log(2);
             return exchangeToPLN(currencyTo, amount);        
         } else if (currencyTo === "PLN") {
+            console.log(3);
             return exchangeFromPLN(currencyFrom, amount);              
         } else {        
+            console.log(4);
             return exchangeFromPLN(currencyFrom, exchangeToPLN(currencyTo, amount));        
         };
     };
     
     const displayResult = (amount, currencyFrom, result, currencyTo) => {
-        const resultElement = document.querySelector(".js-result");        
+        const resultElement = document.querySelector(".js-result");           
         resultElement.innerHTML = `${amount.toFixed(2)} ${currencyFrom} = <strong>${result.toFixed(2)} ${currencyTo}</strong>`;    
     };
     
@@ -73,8 +79,8 @@
     
         const amount = +amountElement.value;
         const currencyFrom = currencyFromElement.value;
-        const currencyTo = currencyToElement.value;
-    
+        const currencyTo = currencyToElement.value;    
+        
         const result = calculateResult(amount, currencyFrom, currencyTo);
              
         displayResult(amount, currencyFrom, result, currencyTo);    
