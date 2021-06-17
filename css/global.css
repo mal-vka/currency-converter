@@ -7,21 +7,29 @@ html {
 }
 
 body {
-    background: rgb(221, 221, 221);  
+    background: rgb(221, 221, 221);
     font-family: 'Quicksand', sans-serif;
     font-size: 20px;
-    text-align: center;    
+    text-align: center;
 }
 
 .background {
     background-image: url("../images/linus-nilsson-WfKndo8Vv7w-unsplash.jpg");
-    background-size: cover;    
+    background-size: cover;
     padding: 40px 20px;
-    margin: 0 auto; 
-    width: 1400px;    
+    margin: 0 auto;
+    width: 1400px;
     max-width: 100%;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-}  
+}
+
+.container {
+    flex-basis: 800px;
+    max-width: 100%;
+    margin: 0 20px;
+    padding: 20px 20px 0 20px;
+    background: rgba(221, 221, 221, 0.7);
+}
