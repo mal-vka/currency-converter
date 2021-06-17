@@ -13,7 +13,7 @@ To build this simple website, I used:
 - OpenGraph tags.
 
 ## preview
-[app animation](images/app-animation.gif)
+[app animation](https://github.com/mal-vka/currency-converter/blob/main/images/app-animation.gif)
 
 ## further development
 Project will be evolving along with my programming skills.
