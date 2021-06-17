@@ -1,4 +1,6 @@
 {
+    const resultElement = document.querySelector(".js-result");
+
     const exchangeToPLN = (currencyTo, amount) => {
         // currency selling rates from cinkciarz.pl, 19.07.2020, 14:00
         const toPLN = 1;
@@ -62,7 +64,6 @@
     };
 
     const displayResult = (amount, currencyFrom, result, currencyTo) => {
-        const resultElement = document.querySelector(".js-result");
         resultElement.innerHTML = `${amount.toFixed(2)} ${currencyFrom} = <strong>${result.toFixed(2)} ${currencyTo}</strong>`;
     };
 
@@ -83,7 +84,6 @@
     };
 
     const onResetButton = () => {
-        const resultElement = document.querySelector(".js-result");
         resultElement.innerHTML = "";
     };
 
