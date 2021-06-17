@@ -7,23 +7,23 @@
         const toGBP = 4.9385;
         const toCHF = 4.1892;
         const toRUB = 0.0563;
-    
+
         switch (currencyTo) {
             case "PLN":
-                return amount / toPLN;            
+                return amount / toPLN;
             case "EUR":
-                return amount / toEUR;            
+                return amount / toEUR;
             case "USD":
-                return amount / toUSD;            
+                return amount / toUSD;
             case "GBP":
-                return amount / toGBP;            
+                return amount / toGBP;
             case "CHF":
-                return amount / toCHF;            
+                return amount / toCHF;
             case "RUB":
-                return amount / toRUB;            
+                return amount / toRUB;
         };
     };
-    
+
     const exchangeFromPLN = (currencyFrom, amount) => {
         // currency purchase rates from cinkciarz.pl, 19.07.2020, 14:00
         const fromPLN = 1;
@@ -32,64 +32,60 @@
         const fromGBP = 4.9079;
         const fromCHF = 4.1578;
         const fromRUB = 0.0527;
-    
+
         switch (currencyFrom) {
             case "PLN":
-                return amount * fromPLN;            
+                return amount * fromPLN;
             case "EUR":
-                return amount * fromEUR;            
+                return amount * fromEUR;
             case "USD":
-                return amount * fromUSD;            
+                return amount * fromUSD;
             case "GBP":
-                return amount * fromGBP;            
+                return amount * fromGBP;
             case "CHF":
-                return amount * fromCHF;            
+                return amount * fromCHF;
             case "RUB":
-                return amount * fromRUB;            
+                return amount * fromRUB;
         };
     };
-    
+
     const calculateResult = (amount, currencyFrom, currencyTo) => {
         if (currencyFrom === currencyTo) {
-            console.log(1);
             return amount;
         } else if (currencyFrom === "PLN") {
-            console.log(2);
-            return exchangeToPLN(currencyTo, amount);        
+            return exchangeToPLN(currencyTo, amount);
         } else if (currencyTo === "PLN") {
-            console.log(3);
-            return exchangeFromPLN(currencyFrom, amount);              
-        } else {        
-            console.log(4);
-            return exchangeFromPLN(currencyFrom, exchangeToPLN(currencyTo, amount));        
+            return exchangeFromPLN(currencyFrom, amount);
+        } else {
+            return exchangeFromPLN(currencyFrom, exchangeToPLN(currencyTo, amount));
         };
     };
-    
+
     const displayResult = (amount, currencyFrom, result, currencyTo) => {
-        const resultElement = document.querySelector(".js-result");           
-        resultElement.innerHTML = `${amount.toFixed(2)} ${currencyFrom} = <strong>${result.toFixed(2)} ${currencyTo}</strong>`;    
+        const resultElement = document.querySelector(".js-result");
+        resultElement.innerHTML = `${amount.toFixed(2)} ${currencyFrom} = <strong>${result.toFixed(2)} ${currencyTo}</strong>`;
     };
-    
+
     const onFormSubmit = (event) => {
         event.preventDefault();
-    
+
         const amountElement = document.querySelector(".js-amount");
         const currencyFromElement = document.querySelector(".js-currencyFrom");
         const currencyToElement = document.querySelector(".js-currencyTo");
-    
+
         const amount = +amountElement.value;
         const currencyFrom = currencyFromElement.value;
-        const currencyTo = currencyToElement.value;    
-        
+        const currencyTo = currencyToElement.value;
+
         const result = calculateResult(amount, currencyFrom, currencyTo);
-             
-        displayResult(amount, currencyFrom, result, currencyTo);    
+
+        displayResult(amount, currencyFrom, result, currencyTo);
     };
-    
+
     const init = () => {
         const calculatorElement = document.querySelector(".js-calculator");
-        calculatorElement.addEventListener("submit", onFormSubmit);   
+        calculatorElement.addEventListener("submit", onFormSubmit);
     };
-    
+
     init();
 }
