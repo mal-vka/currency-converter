@@ -82,9 +82,17 @@
         displayResult(amount, currencyFrom, result, currencyTo);
     };
 
+    const onResetButton = () => {
+        const resultElement = document.querySelector(".js-result");
+        resultElement.innerHTML = "";
+    };
+
     const init = () => {
         const calculatorElement = document.querySelector(".js-calculator");
         calculatorElement.addEventListener("submit", onFormSubmit);
+
+        const resetButton = document.querySelector(".js-resetButton");
+        resetButton.addEventListener("click", onResetButton);
     };
 
     init();
